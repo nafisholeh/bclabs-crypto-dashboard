@@ -22,12 +22,28 @@ const config: Config = {
         '4xl': '2.25rem',
         '3xl': '1.875rem',
         '2xl': '1.5rem',
+        md: '1.125rem',
       },
       letterSpacing: {
         tight: '0.68px',
       },
       colors: {
         white: '#FFFFFF',
+        primary: '#FAFAFA',
+        secondary: '#666666',
+        accent: '#3980FF',
+        negative: '#FF5454',
+        positive: '#6DFFDC',
+        neutral: '#666666',
+        action: '#00554B',
+      },
+      backgroundColor: {
+        'black-80': 'rgba(0, 0, 0, 0.8)',
+        'button-secondary': '#6DFF8B',
+      },
+      borderColor: {
+        primary: '#464646',
+        secondary: '#4F4F4F',
       },
     },
   },
