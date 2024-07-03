@@ -9,7 +9,7 @@ export default async function Home() {
 
   return (
     <main className="relative h-screen w-screen">
-      <div className="relative flex flex-col items-center justify-center max-w-[777px] mx-auto">
+      <div className="relative flex flex-col items-center justify-center max-w-[777px] mt-[160px] mx-auto">
         <h1 className="font-roboto lg:text-8xl text-6xl leading-tight tracking-tight text-white text-center">
           Easy send and Request Crypto.
         </h1>
