@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { formatToDollar } from '@/utils/currency';
+import TradeButton from './TradeButton';
 
 interface AssetRowProps {
   asset: {
@@ -31,7 +32,7 @@ export default function AssetRow({ asset, key }: AssetRowProps) {
       <td className={`${getPriceClass(asset.priceChangeUsd)}`}>{formatToDollar(asset.priceChangeUsd)}</td>
       <td>
         <div className="flex justify-end">
-          <button className="bg-button-secondary text-action p-[10px]">Trade</button>
+          <TradeButton />
         </div>
       </td>
     </tr>
