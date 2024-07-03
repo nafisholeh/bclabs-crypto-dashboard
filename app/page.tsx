@@ -1,3 +1,4 @@
+import SwapInput from '@/components/SwapInput';
 import Image from 'next/image';
 
 export default function Home() {
@@ -59,49 +60,27 @@ export default function Home() {
         </div>
 
         <div className="relative flex mt-12">
-
-          <div className="flex flex-1 justify-between py-5 px-12 bg-placeholder rounded-l-lg">
-            <div className="flex flex-col font-medium">
-              <span className="text-7xl text-primary leading-loose">0.00</span>
-              <span className="text-xl text-secondary">$0.00</span>
-            </div>
-            <div>
-              <div className="flex justify-between items-center min-w-[122px] bg-black py-2 px-3">
-                <Image src="/bitcoin-currency.png" alt="BTC" width={32} height={32} />
-                <div className="flex flex-row items-center min-w-[58px] text-lg text-currency">
-                  BTC
-                  <Image src="/right-arrow.png" alt="right-arrow" width={6} height={10} className="ml-2"></Image>
-                </div>
-              </div>
-              <div className="text-primary text-xl mt-2">
-                Balance: <span className="text-accent">24,240</span>
-              </div>
-            </div>
-          </div>
+          <SwapInput
+            position="left"
+            currency="BTC"
+            currencyIcon="/bitcoin-currency.png"
+            balance="24,240"
+            valueUsd={0}
+            valueCurrency={0}
+          />
 
           <div className="flex items-center justify-center absolute inset-0">
             <Image src="/swap-icon.png" alt="Swap" width={50} height={50} />
           </div>
 
-          <div className="flex flex-1 justify-between py-5 px-12 bg-placeholder rounded-r-lg ml-1">
-            <div className="flex flex-col font-medium">
-              <span className="text-7xl text-primary leading-loose">0.00</span>
-              <span className="text-xl text-secondary">$0.00</span>
-            </div>
-            <div>
-              <div className="flex justify-between items-center min-w-[122px] bg-black py-2 px-3">
-                <Image src="/bnb-currency.png" alt="BTC" width={32} height={32} />
-                <div className="flex flex-row items-center min-w-[58px] text-lg text-currency">
-                  BNB
-                  <Image src="/right-arrow.png" alt="right-arrow" width={6} height={10} className="ml-2"></Image>
-                </div>
-              </div>
-              <div className="text-primary text-xl mt-2">
-                Balance: <span className="text-accent">63,970</span>
-              </div>
-            </div>
-          </div>
-
+          <SwapInput
+            position="right"
+            currency="BNB"
+            currencyIcon="/bnb-currency.png"
+            balance="63,970"
+            valueUsd={0}
+            valueCurrency={0}
+          />
         </div>
 
         <div className="flex justify-center mt-7">
