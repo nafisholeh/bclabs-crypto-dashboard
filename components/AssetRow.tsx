@@ -12,6 +12,10 @@ interface AssetRowProps {
   key: number;
 }
 
+const getPriceClass = (price: number) => {
+  return price > 0 ? 'text-positive' : price < 0 ? 'text-negative' : 'text-neutral';
+};
+
 export default function AssetRow({ asset, key }: AssetRowProps) {
   return (
     <tr key={key} className="h-[80px] text-2xl font-medium">
@@ -23,8 +27,8 @@ export default function AssetRow({ asset, key }: AssetRowProps) {
         </div>
       </td>
       <td className="text-primary">{formatToDollar(asset.lastTradePrice)}</td>
-      <td className="text-primary">{asset.priceChangePercentage}%</td>
-      <td className="text-primary">{formatToDollar(asset.priceChangeUsd)}</td>
+      <td className={`${getPriceClass(asset.priceChangePercentage)}`}>{asset.priceChangePercentage}%</td>
+      <td className={`${getPriceClass(asset.priceChangeUsd)}`}>{formatToDollar(asset.priceChangeUsd)}</td>
       <td>
         <div className="flex justify-end">
           <button className="bg-button-secondary text-action p-[10px]">Trade</button>
