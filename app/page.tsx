@@ -1,7 +1,11 @@
 import SwapInput from '@/components/SwapInput';
 import Image from 'next/image';
+import prisma from '../lib/prisma';
+import AssetRow from '@/components/AssetRow';
 
-export default function Home() {
+export default async function Home() {
+  const cryptoAssets = await prisma.cryptocurrency.findMany();
+
   return (
     <main className="relative h-screen w-screen">
       <div className="relative flex flex-col items-center justify-center max-w-[777px] mx-auto">
@@ -9,7 +13,8 @@ export default function Home() {
           Easy send and Request Crypto.
         </h1>
         <p className="font-roboto mt-[30px] lg:text-xl text-lg text-white text-center max-w-[557px] mt-4">
-          Bring blockchain to the people. Solana supports experiences for power users, new consumers, and everyone in between.
+          Bring blockchain to the people. Solana supports experiences for power users, new consumers, and everyone in
+          between.
         </p>
       </div>
 
@@ -29,23 +34,10 @@ export default function Home() {
             <tr>
               <td colSpan={5} className="h-[8px]"></td>
             </tr>
-            <tr className="h-[80px] text-2xl font-medium">
-              <td>
-                <div className="flex items-center">
-                  <Image src="/btc.png" width={64} height={64} alt="bitcoin" />
-                  <span className="text-primary ml-3">BTC/</span>
-                  <span className="text-secondary">USD</span>
-                </div>
-              </td>
-              <td className="text-primary">$63,000.00</td>
-              <td className="text-negative">-2.21%</td>
-              <td className="text-negative">-$1,426.18</td>
-              <td>
-                <div className="flex justify-end">
-                  <button className="bg-button-secondary text-action p-[10px]">Trade</button>
-                </div>
-              </td>
-            </tr>
+            {cryptoAssets.map((asset, index) => (
+              <AssetRow asset={asset} key={index} />
+            ))}
+
             {/* Repeat for other rows */}
           </tbody>
         </table>
@@ -53,7 +45,6 @@ export default function Home() {
 
       {/* Swap Tokens */}
       <div className="relative max-w-[1180px] mx-auto mt-[50px] p-[2.5rem] rounded-10px border border-primary bg-black-80 rounded-[10px]">
-
         <div className="flex justify-between items-center">
           <span className="font-medium lg:text-xl text-lg text-primary">SWAP TOKENS</span>
           <Image src="/settings-icon.png" alt="Settings" width={32} height={32} />
@@ -96,7 +87,6 @@ export default function Home() {
           </div>
           <span className="text-xl text-secondary">Updates in 4s</span>
         </div>
-
       </div>
     </main>
   );
