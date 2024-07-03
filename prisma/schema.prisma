@@ -1,0 +1,23 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+datasource db {
+  provider = "postgresql" // or any other database provider
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Cryptocurrency {
+  id                    Int      @id @default(autoincrement())
+  assetName            String
+  symbol                String
+  lastTradePrice        Float
+  priceChangePercentage Float
+  priceChangeUsd        Float
+}
