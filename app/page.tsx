@@ -2,6 +2,7 @@ import SwapInput from '@/components/SwapInput';
 import Image from 'next/image';
 import prisma from '../lib/prisma';
 import AssetRow from '@/components/AssetRow';
+import ActionButton from '@/components/ActionButton';
 
 export default async function Home() {
   const cryptoAssets = await prisma.cryptocurrency.findMany();
@@ -75,9 +76,7 @@ export default async function Home() {
         </div>
 
         <div className="flex justify-center mt-7">
-          <div className="flex justify-center font-medium text-white min-w-[250px] bg-button-primary rounded-tl-lg rounded-br-lg py-4">
-            SWOP TOKENS
-          </div>
+          <ActionButton text="SWAP TOKENS" />
         </div>
 
         <div className="flex justify-between items-center mt-5">

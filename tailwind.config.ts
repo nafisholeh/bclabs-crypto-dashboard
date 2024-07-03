@@ -48,6 +48,7 @@ const config: Config = {
       borderColor: {
         primary: '#464646',
         secondary: '#4F4F4F',
+        button: '#9945FF',
       },
       lineHeight: {
         loose: '3.6rem',
