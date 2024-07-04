@@ -48,7 +48,7 @@ export default async function Home() {
       {/* Swap Tokens */}
       <div className="relative max-w-[1180px] mx-auto mt-[50px] p-[2.5rem] rounded-10px border border-primary bg-black-80 rounded-[10px]">
         <div className="flex justify-between items-center">
-          <span className="font-medium lg:text-xl text-lg text-primary">SWAP TOKENS</span>
+          <span className="font-medium lg:text-2xl text-lg text-primary">SWAP TOKENS</span>
           <Image src="/settings-icon.png" alt="Settings" width={32} height={32} />
         </div>
 
