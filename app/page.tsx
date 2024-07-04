@@ -13,9 +13,10 @@ export default async function Home() {
         <h1 className="font-roboto lg:text-8xl text-6xl leading-tight tracking-tight text-white text-center">
           Easy send and Request Crypto.
         </h1>
-        <p className="font-roboto mt-[30px] lg:text-xl text-lg text-white text-center max-w-[557px] mt-4">
-          Bring blockchain to the people. Solana supports experiences for power users, new consumers, and everyone in
-          between.
+        <p className="font-roboto mt-[30px] lg:text-2xl text-lg text-white text-center max-w-[557px] mt-4">
+          Bring blockchain to the people. Solana supports experiences
+          <br />
+          for power users, new consumers, and everyone in between.
         </p>
       </div>
 
@@ -23,7 +24,7 @@ export default async function Home() {
       <div className="relative max-w-[1180px] mx-auto mt-[50px] py-[1.9rem] px-[2.5rem] rounded-10px border border-primary bg-black-80 rounded-[10px]">
         <table className="min-w-full font-roboto text-primary">
           <thead>
-            <tr className="h-[50px] font-medium lg:text-xl text-lg text-primary border-b border-secondary">
+            <tr className="h-[50px] font-medium lg:text-2xl text-lg text-primary border-b border-secondary">
               <td>ASSETS</td>
               <td>LAST TRADE</td>
               <td>24H %</td>

@@ -22,7 +22,7 @@ const config: Config = {
         '5xl': '2.25rem',
         '4xl': '1.875rem',
         '3xl': '1.5rem',
-        '2xl': '1.125rem',
+        '2xl': '1.25rem',
         xl: '0.875rem',
       },
       letterSpacing: {
