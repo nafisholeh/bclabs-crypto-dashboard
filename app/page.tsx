@@ -23,7 +23,7 @@ export default async function Home() {
 
       <NavBar />
 
-      <div className="relative flex flex-col items-center justify-center max-w-[777px] pt-[66px] md:mx-auto mx-4">
+      <div className="relative flex flex-col items-center justify-center max-w-[777px] pt-[66px] md:mx-auto mx-7">
         <h1 className="font-roboto lg:text-8xl xs:text-6xl text-4xl leading-tight tracking-tight text-white text-center">
           Easy send and Request Crypto.
         </h1>
