@@ -23,11 +23,11 @@ export default async function Home() {
 
       <NavBar />
 
-      <div className="relative flex flex-col items-center justify-center max-w-[777px] pt-[66px] mx-auto">
-        <h1 className="font-roboto lg:text-8xl text-6xl leading-tight tracking-tight text-white text-center">
+      <div className="relative flex flex-col items-center justify-center max-w-[777px] pt-[66px] md:mx-auto mx-4">
+        <h1 className="font-roboto lg:text-8xl xs:text-6xl text-4xl leading-tight tracking-tight text-white text-center">
           Easy send and Request Crypto.
         </h1>
-        <p className="font-roboto mt-[30px] lg:text-2xl text-lg text-white text-center max-w-[557px] mt-4">
+        <p className="font-roboto mt-[30px] lg:text-2xl xs:text-lg text-xl text-white text-center max-w-[557px] mt-4">
           Bring blockchain to the people. Solana supports experiences
           <br />
           for power users, new consumers, and everyone in between.
