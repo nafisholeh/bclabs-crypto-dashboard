@@ -4,6 +4,7 @@ import prisma from '../lib/prisma';
 import AssetRow from '@/components/AssetRow';
 import ActionButton from '@/components/ActionButton';
 import BackgroundImage from '../public/background.png';
+import NavBar from '@/components/NavBar';
 
 export default async function Home() {
   const cryptoAssets = await prisma.cryptocurrency.findMany();
@@ -20,7 +21,9 @@ export default async function Home() {
         quality={100}
       />
 
-      <div className="relative flex flex-col items-center justify-center max-w-[777px] pt-[160px] mx-auto">
+      <NavBar />
+
+      <div className="relative flex flex-col items-center justify-center max-w-[777px] pt-[66px] mx-auto">
         <h1 className="font-roboto lg:text-8xl text-6xl leading-tight tracking-tight text-white text-center">
           Easy send and Request Crypto.
         </h1>

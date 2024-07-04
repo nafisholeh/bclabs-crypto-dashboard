@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import ActionButton from './ActionButton';
 
-const Navbar = () => {
+export default function NavBar() {
   return (
-    <nav className="fixed top-0 w-full">
+    <nav className="w-full">
       <div className="flex justify-between items-center max-w-[1180px] mx-auto py-4">
         <div className="flex items-center">
           <Image src="/web-logo.png" alt="Logo" width={193} height={25} />
@@ -21,6 +21,4 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}
