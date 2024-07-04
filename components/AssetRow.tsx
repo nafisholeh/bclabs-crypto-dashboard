@@ -23,7 +23,7 @@ export default function AssetRow({ asset, key }: AssetRowProps) {
   return (
     <tr key={key} className="h-[80px] text-2xl font-medium">
       <td>
-        <div className="flex items-center md:mt-0 mt-3">
+        <div className="flex items-center md:mt-0 mt-3 text-xl sm:text-2xl">
           <Image src={`/asset-${asset.symbol}.png`} width={64} height={64} alt="bitcoin" />
           <span className="text-primary ml-3 uppercase">{asset.symbol}/</span>
           <span className="text-secondary">USD</span>
@@ -33,7 +33,7 @@ export default function AssetRow({ asset, key }: AssetRowProps) {
           <dd className="sm:hidden font-small">{lastTradePriceFormatted}%</dd>
           <dt className="font-small text-secondary mt-2">24H %</dt>
           <dd className="font-small">{asset.priceChangePercentage}%</dd>
-          <dt className="font-small text-secondary mt-2">24H CHANGE</dt>
+          <dt className="font-small text-secondary mt-2">24H change</dt>
           <dd className="font-small">{priceChangeUsdFormatted}%</dd>
           <dd className="visible xs:hidden mt-4 w-full">
             <TradeButton />

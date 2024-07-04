@@ -12,7 +12,7 @@ export default function ActionButton({ size = 'medium', variant = 'fill', text }
   return (
     <button
       onClick={dummyClick}
-      className={`flex justify-center font-medium text-white ${size === 'medium' ? 'min-w-[250px] py-4' : 'min-w-[74px] p-2'} ${variant === 'fill' ? 'bg-button-primary' : 'border border-button'} rounded-tl-lg rounded-br-lg`}>
+      className={`flex justify-center font-medium text-md text-white ${size === 'medium' ? 'min-w-[150px] sm:min-w-[250px] py-4' : 'min-w-[74px] p-2'} ${variant === 'fill' ? 'bg-button-primary' : 'border border-button'} rounded-tl-lg rounded-br-lg`}>
       {text}
     </button>
   );

@@ -113,7 +113,7 @@ export default async function Home() {
           <div className="flex flex-col text-center sm:text-left">
             <span className="text-xs sm:text-xl text-primary">1 BTC = 32.4039 ETH</span>
             <span className="text-xs sm:text-xl text-accent mt-1">Free exchage</span>
-            <span className="mt-1 sm:hidden text-xs sm:text-xl text-secondary">Updates in 4s</span>
+            <span className="mt-1 sm:hidden text-xs sm:text-xl text-secondary mt-3">Updates in 4s</span>
           </div>
           <span className="hidden sm:block text-xs sm:text-xl text-secondary">Updates in 4s</span>
         </div>
