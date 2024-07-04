@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <Image src="/web-logo.png" alt="Logo" width={193} height={25} />
         </div>
-        <div className="flex space-x-4 text-xl font-medium text-white">
+        <div className="flex space-x-12 text-xl font-medium text-white">
           <span>Exchange</span>
           <span>Last Transactions</span>
           <span>Invite Friend</span>
