@@ -9,18 +9,18 @@ export default async function Home() {
   const cryptoAssets = await prisma.cryptocurrency.findMany();
 
   return (
-    <main className="fixed top-0 -z-10 bg-black h-screen w-screen">
+    <main className="overflow-y-auto h-screen w-screen">
       <Image
         alt="Background Image"
         src={BackgroundImage}
         width={4320}
         height={2517}
         sizes="100vw"
-        className="w-full h-auto absolute"
+        className="w-full h-auto absolute -z-10"
         quality={100}
       />
 
-      <div className="relative flex flex-col items-center justify-center max-w-[777px] mt-[160px] mx-auto">
+      <div className="relative flex flex-col items-center justify-center max-w-[777px] pt-[160px] mx-auto">
         <h1 className="font-roboto lg:text-8xl text-6xl leading-tight tracking-tight text-white text-center">
           Easy send and Request Crypto.
         </h1>
@@ -57,7 +57,7 @@ export default async function Home() {
       </div>
 
       {/* Swap Tokens */}
-      <div className="relative max-w-[1180px] mx-auto mt-[50px] p-[2.5rem] rounded-10px border border-primary bg-black-80 rounded-[10px]">
+      <div className="relative max-w-[1180px] mx-auto mt-[50px] mb-[150px] p-[2.5rem] rounded-10px border border-primary bg-black-80 rounded-[10px]">
         <div className="flex justify-between items-center">
           <span className="font-medium lg:text-2xl text-lg text-primary">SWAP TOKENS</span>
           <Image src="/settings-icon.png" alt="Settings" width={32} height={32} />
