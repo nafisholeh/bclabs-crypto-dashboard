@@ -2,14 +2,15 @@ import Image from 'next/image';
 import { formatToDollar } from '@/utils/currency';
 import TradeButton from './TradeButton';
 
+export interface Asset {
+  assetName: string;
+  symbol: string;
+  lasttradeprice: number;
+  pricechangepercentage: number;
+  pricechangeusd: number;
+}
 interface AssetRowProps {
-  asset: {
-    assetName: string;
-    symbol: string;
-    lastTradePrice: number;
-    priceChangePercentage: number;
-    priceChangeUsd: number;
-  };
+  asset: Asset;
   key: number;
 }
 
@@ -18,8 +19,8 @@ const getPriceClass = (price: number) => {
 };
 
 export default function AssetRow({ asset, key }: AssetRowProps) {
-  const lastTradePriceFormatted = formatToDollar(asset.lastTradePrice);
-  const priceChangeUsdFormatted = formatToDollar(asset.priceChangeUsd);
+  const lastTradePriceFormatted = formatToDollar(asset.lasttradeprice);
+  const priceChangeUsdFormatted = formatToDollar(asset.pricechangeusd);
   return (
     <tr key={key} className="h-[80px] text-2xl font-medium">
       <td>
@@ -34,12 +35,12 @@ export default function AssetRow({ asset, key }: AssetRowProps) {
           <div className="flex flex-row sm:flex-col justify-between">
             <div>
               <dt className="font-thin text-secondary mt-2">24H change</dt>
-              <dd className={`${getPriceClass(asset.priceChangeUsd)} font-medium`}>{priceChangeUsdFormatted}</dd>
+              <dd className={`${getPriceClass(asset.pricechangeusd)} font-medium`}>{priceChangeUsdFormatted}</dd>
             </div>
             <div>
               <dt className="font-thin text-secondary mt-2">24H %</dt>
-              <dd className={`${getPriceClass(asset.priceChangePercentage)} font-medium`}>
-                {asset.priceChangePercentage}%
+              <dd className={`${getPriceClass(asset.pricechangepercentage)} font-medium`}>
+                {asset.pricechangepercentage}%
               </dd>
             </div>
           </div>
@@ -51,10 +52,10 @@ export default function AssetRow({ asset, key }: AssetRowProps) {
       <td className="text-primary hidden sm:table-cell md:align-middle align-baseline">
         <div className="md:mt-0 mt-7">{lastTradePriceFormatted}</div>
       </td>
-      <td className={`${getPriceClass(asset.priceChangePercentage)} hidden md:table-cell`}>
-        {asset.priceChangePercentage}%
+      <td className={`${getPriceClass(asset.pricechangepercentage)} hidden md:table-cell`}>
+        {asset.pricechangepercentage}%
       </td>
-      <td className={`${getPriceClass(asset.priceChangeUsd)} hidden md:table-cell`}>{priceChangeUsdFormatted}</td>
+      <td className={`${getPriceClass(asset.pricechangeusd)} hidden md:table-cell`}>{priceChangeUsdFormatted}</td>
       <td className="hidden sm:table-cell md:align-middle align-baseline">
         <div className="flex justify-end md:mt-0 mt-5">
           <TradeButton />

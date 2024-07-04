@@ -1,13 +1,14 @@
 import SwapInput from '@/components/SwapInput';
 import Image from 'next/image';
-import prisma from '../lib/prisma';
-import AssetRow from '@/components/AssetRow';
+import AssetRow, { Asset } from '@/components/AssetRow';
 import ActionButton from '@/components/ActionButton';
 import BackgroundImage from '../public/background.png';
 import NavBar from '@/components/NavBar';
+import { sql } from '@vercel/postgres';
 
 export default async function Home() {
-  const cryptoAssets = await prisma.cryptocurrency.findMany();
+  const sqlResult = await sql`SELECT * FROM Cryptocurrency;`;
+  const cryptoAssets = sqlResult.rows;
 
   return (
     <main className="overflow-y-auto h-screen w-screen">
@@ -54,7 +55,7 @@ export default async function Home() {
               <td colSpan={5} className="h-[8px]"></td>
             </tr>
             {cryptoAssets.map((asset, index) => (
-              <AssetRow asset={asset} key={index} />
+              <AssetRow asset={asset as Asset} key={index} />
             ))}
 
             {/* Repeat for other rows */}
