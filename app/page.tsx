@@ -39,14 +39,14 @@ export default async function Home() {
         <table className="min-w-full font-roboto text-primary">
           <thead>
             <tr className="h-[50px] font-medium lg:text-2xl text-lg text-primary border-b border-secondary">
-              <td className="flex flex-row items-end xs:table-cell justify-between xs:max-w-[256px]">
+              <td className="flex flex-row items-end sm:table-cell justify-between sm:max-w-[256px]">
                 ASSETS
-                <div className="xs:hidden text-accent">MORE {'>'}</div>
+                <div className="sm:hidden text-accent">MORE {'>'}</div>
               </td>
               <td className="max-w-[256px] hidden sm:table-cell">LAST TRADE</td>
               <td className="max-w-[256px] hidden md:table-cell">24H %</td>
               <td className="max-w-[126px] hidden md:table-cell">24H CHANGE</td>
-              <td className="max-w-[126px] hidden xs:table-cell text-accent text-right">MORE {'>'}</td>
+              <td className="max-w-[126px] hidden sm:table-cell text-accent text-right">MORE {'>'}</td>
             </tr>
           </thead>
           <tbody>
