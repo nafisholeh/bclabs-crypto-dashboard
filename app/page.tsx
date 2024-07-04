@@ -35,15 +35,18 @@ export default async function Home() {
       </div>
 
       {/* Crypto list */}
-      <div className="relative max-w-[1180px] mx-auto mt-[50px] py-[1.9rem] px-[2.5rem] backdrop-blur-lg rounded-10px border border-primary bg-black-80 rounded-[10px]">
+      <div className="relative max-w-[1180px] xl:mx-auto mx-5 mt-[50px] py-[1.9rem] px-[2.5rem] backdrop-blur-lg rounded-10px border border-primary bg-black-80 rounded-[10px]">
         <table className="min-w-full font-roboto text-primary">
           <thead>
             <tr className="h-[50px] font-medium lg:text-2xl text-lg text-primary border-b border-secondary">
-              <td className="min-w-[256px]">ASSETS</td>
-              <td className="min-w-[256px]">LAST TRADE</td>
-              <td className="min-w-[256px]">24H %</td>
-              <td className="min-w-[126px]">24H CHANGE</td>
-              <td className="min-w-[126px] text-accent text-right">MORE {'>'}</td>
+              <td className="flex flex-row items-end xs:table-cell justify-between max-w-[256px]">
+                ASSETS
+                <div className="xs:hidden text-accent">MORE {'>'}</div>
+              </td>
+              <td className="max-w-[256px] hidden sm:table-cell">LAST TRADE</td>
+              <td className="max-w-[256px] hidden md:table-cell">24H %</td>
+              <td className="max-w-[126px] hidden md:table-cell">24H CHANGE</td>
+              <td className="max-w-[126px] hidden xs:table-cell text-accent text-right">MORE {'>'}</td>
             </tr>
           </thead>
           <tbody>
@@ -60,7 +63,7 @@ export default async function Home() {
       </div>
 
       {/* Swap Tokens */}
-      <div className="relative max-w-[1180px] mx-auto mt-[50px] mb-[150px] p-[2.5rem] backdrop-blur-lg rounded-10px border border-primary bg-black-80 rounded-[10px]">
+      <div className="relative max-w-[1180px] xl:mx-auto mx-5 mt-[50px] mb-[150px] p-[2.5rem] backdrop-blur-lg rounded-10px border border-primary bg-black-80 rounded-[10px]">
         <div className="flex justify-between items-center">
           <span className="font-medium lg:text-2xl text-lg text-primary">SWAP TOKENS</span>
           <Image src="/settings-icon.png" alt="Settings" width={32} height={32} />
