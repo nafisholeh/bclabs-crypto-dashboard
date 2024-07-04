@@ -29,16 +29,18 @@ export default function AssetRow({ asset, key }: AssetRowProps) {
           <span className="text-secondary">USD</span>
         </div>
         <dl className="md:hidden text-xl my-3">
-          <dt className="sm:hidden font-small text-secondary">Last trade</dt>
-          <dd className="sm:hidden font-small">{lastTradePriceFormatted}%</dd>
+          <dt className="sm:hidden font-thin text-secondary">Last trade</dt>
+          <dd className="sm:hidden font-medium">{lastTradePriceFormatted}%</dd>
           <div className="flex flex-row sm:flex-col justify-between">
             <div>
-              <dt className="font-small text-secondary mt-2">24H change</dt>
-              <dd className="font-small">{priceChangeUsdFormatted}</dd>
+              <dt className="font-thin text-secondary mt-2">24H change</dt>
+              <dd className={`${getPriceClass(asset.priceChangeUsd)} font-medium`}>{priceChangeUsdFormatted}</dd>
             </div>
             <div>
-              <dt className="font-small text-secondary mt-2">24H %</dt>
-              <dd className="font-small">{asset.priceChangePercentage}%</dd>
+              <dt className="font-thin text-secondary mt-2">24H %</dt>
+              <dd className={`${getPriceClass(asset.priceChangePercentage)} font-medium`}>
+                {asset.priceChangePercentage}%
+              </dd>
             </div>
           </div>
           <dd className="visible sm:hidden mt-4 w-full">
