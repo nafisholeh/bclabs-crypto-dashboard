@@ -3,12 +3,23 @@ import Image from 'next/image';
 import prisma from '../lib/prisma';
 import AssetRow from '@/components/AssetRow';
 import ActionButton from '@/components/ActionButton';
+import BackgroundImage from '../public/background.png';
 
 export default async function Home() {
   const cryptoAssets = await prisma.cryptocurrency.findMany();
 
   return (
-    <main className="relative h-screen w-screen">
+    <main className="fixed top-0 -z-10 bg-black h-screen w-screen">
+      <Image
+        alt="Background Image"
+        src={BackgroundImage}
+        width={4320}
+        height={2517}
+        sizes="100vw"
+        className="w-full h-auto absolute"
+        quality={100}
+      />
+
       <div className="relative flex flex-col items-center justify-center max-w-[777px] mt-[160px] mx-auto">
         <h1 className="font-roboto lg:text-8xl text-6xl leading-tight tracking-tight text-white text-center">
           Easy send and Request Crypto.
