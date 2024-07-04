@@ -35,7 +35,7 @@ export default async function Home() {
       </div>
 
       {/* Crypto list */}
-      <div className="relative max-w-[1180px] mx-auto mt-[50px] py-[1.9rem] px-[2.5rem] rounded-10px border border-primary bg-black-80 rounded-[10px]">
+      <div className="relative max-w-[1180px] mx-auto mt-[50px] py-[1.9rem] px-[2.5rem] backdrop-blur-lg rounded-10px border border-primary bg-black-80 rounded-[10px]">
         <table className="min-w-full font-roboto text-primary">
           <thead>
             <tr className="h-[50px] font-medium lg:text-2xl text-lg text-primary border-b border-secondary">
@@ -60,7 +60,7 @@ export default async function Home() {
       </div>
 
       {/* Swap Tokens */}
-      <div className="relative max-w-[1180px] mx-auto mt-[50px] mb-[150px] p-[2.5rem] rounded-10px border border-primary bg-black-80 rounded-[10px]">
+      <div className="relative max-w-[1180px] mx-auto mt-[50px] mb-[150px] p-[2.5rem] backdrop-blur-lg rounded-10px border border-primary bg-black-80 rounded-[10px]">
         <div className="flex justify-between items-center">
           <span className="font-medium lg:text-2xl text-lg text-primary">SWAP TOKENS</span>
           <Image src="/settings-icon.png" alt="Settings" width={32} height={32} />
