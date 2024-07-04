@@ -39,11 +39,11 @@ export default async function Home() {
         <table className="min-w-full font-roboto text-primary">
           <thead>
             <tr className="h-[50px] font-medium lg:text-2xl text-lg text-primary border-b border-secondary">
-              <td>ASSETS</td>
-              <td>LAST TRADE</td>
-              <td>24H %</td>
-              <td>24H CHANGE</td>
-              <td className="text-accent text-right">MORE {'>'}</td>
+              <td className="min-w-[256px]">ASSETS</td>
+              <td className="min-w-[256px]">LAST TRADE</td>
+              <td className="min-w-[256px]">24H %</td>
+              <td className="min-w-[126px]">24H CHANGE</td>
+              <td className="min-w-[126px] text-accent text-right">MORE {'>'}</td>
             </tr>
           </thead>
           <tbody>
