@@ -7,6 +7,11 @@
 datasource db {
   provider = "postgresql" // or any other database provider
   url      = env("DATABASE_URL")
+  pool     = {
+    maxOpenConnections = 10
+    maxIdleConnections = 10
+    maxLifetime        = "30m"
+  }
 }
 
 generator client {
