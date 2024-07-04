@@ -39,7 +39,7 @@ export default async function Home() {
         <table className="min-w-full font-roboto text-primary">
           <thead>
             <tr className="h-[50px] font-medium lg:text-2xl text-lg text-primary border-b border-secondary">
-              <td className="flex flex-row items-end xs:table-cell justify-between max-w-[256px]">
+              <td className="flex flex-row items-end xs:table-cell justify-between xs:max-w-[256px]">
                 ASSETS
                 <div className="xs:hidden text-accent">MORE {'>'}</div>
               </td>
@@ -66,10 +66,16 @@ export default async function Home() {
       <div className="relative max-w-[1180px] xl:mx-auto mx-5 mt-[50px] mb-[150px] p-[2.5rem] backdrop-blur-lg rounded-10px border border-primary bg-black-80 rounded-[10px]">
         <div className="flex justify-between items-center">
           <span className="font-medium lg:text-2xl text-lg text-primary">SWAP TOKENS</span>
-          <Image src="/settings-icon.png" alt="Settings" width={32} height={32} />
+          <Image
+            src="/settings-icon.png"
+            alt="Settings"
+            width={32}
+            height={32}
+            className="w-[22px] xs:w-[32px] h-[22px] xs:h-[32px]"
+          />
         </div>
 
-        <div className="relative flex mt-12">
+        <div className="relative flex flex-col md:flex-row mt-12">
           <SwapInput
             position="left"
             currency="BTC"
@@ -80,7 +86,13 @@ export default async function Home() {
           />
 
           <div className="flex items-center justify-center absolute inset-0">
-            <Image src="/swap-icon.png" alt="Swap" width={50} height={50} />
+            <Image
+              src="/swap-icon.png"
+              alt="Swap"
+              width={50}
+              height={50}
+              className="w-[30px] xs:w-[50px] h-[30px] xs:h-[50px]"
+            />
           </div>
 
           <SwapInput
@@ -97,12 +109,13 @@ export default async function Home() {
           <ActionButton text="SWAP TOKENS" />
         </div>
 
-        <div className="flex justify-between items-center mt-5">
-          <div className="flex flex-col">
-            <span className="text-xl text-primary">1 BTC = 32.4039 ETH</span>
-            <span className="text-xl text-accent mt-1">Free exchage</span>
+        <div className="flex justify-center sm:justify-between items-center mt-5">
+          <div className="flex flex-col text-center sm:text-left">
+            <span className="text-xs sm:text-xl text-primary">1 BTC = 32.4039 ETH</span>
+            <span className="text-xs sm:text-xl text-accent mt-1">Free exchage</span>
+            <span className="mt-1 sm:hidden text-xs sm:text-xl text-secondary">Updates in 4s</span>
           </div>
-          <span className="text-xl text-secondary">Updates in 4s</span>
+          <span className="hidden sm:block text-xs sm:text-xl text-secondary">Updates in 4s</span>
         </div>
       </div>
     </main>

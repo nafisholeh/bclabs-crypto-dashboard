@@ -20,14 +20,16 @@ export default function SwapInput({
 }: SwapInputProps) {
   return (
     <div
-      className={`flex flex-1 justify-between py-5 px-12 bg-placeholder ${position === 'left' ? 'rounded-l-lg' : 'rounded-r-lg ml-1'}`}>
+      className={`flex flex-1 justify-between py-5 px-6 md:px-12 bg-placeholder ${position === 'left' ? 'rounded-t-lg md:rounded-tr-none md:rounded-l-lg' : 'rounded-b-lg md:rounded-bl-none md:rounded-r-lg md:ml-1 mt-1 md:mt-0'}`}>
       <div className="flex flex-col font-medium">
-        <span className="text-7xl text-primary leading-loose">{valueCurrency.toFixed(2)}</span>
+        <span className="text-3xl sm:text-7xl mt-2 xs:mt-0 text-primary xs:leading-loose">
+          {valueCurrency.toFixed(2)}
+        </span>
         <span className="text-xl text-secondary">${valueUsd.toFixed(2)}</span>
       </div>
-      <div>
+      <div className="mt-2 sm:mt-0">
         <CryptoPicker currency={currency} currencyIcon={currencyIcon} />
-        <div className="text-primary text-xl mt-2">
+        <div className="text-primary text-xs sm:text-xl mt-2">
           Balance: <span className="text-accent">{balance}</span>
         </div>
       </div>
